@@ -120,7 +120,6 @@ return [
             'query' => [
                 'Cities' => CitiesQuery::class,
                 'Institutions' => InstitutionQuery::class,
-                'Neighborhood' => NeighborhoodQuery::class
             ],
             'mutation' => [
                 'Login' => LoginMutation::class
@@ -144,17 +143,11 @@ return [
         'City' => CityType::class,
         'Department' => DepartmentType::class,
         'Country' => CountryType::class,
-        'Arl' => ArlType::class,
-        'BloodGroup' => BloodGroupType::class,
-        'Degrees' => DegreesType::class,
         'DocumentType' => DocumentTypeType::class,
-        'Eps' => EpsType::class,
         'Institution' => InstitutionType::class,
         'Status' => StatusType::class,
         'User' => UserType::class,
         'Login' => LoginType::class,
-        'Neighborhood' => NeighborhoodType::class
-
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request

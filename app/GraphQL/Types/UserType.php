@@ -17,22 +17,19 @@ class UserType extends GraphQLType
     public function fields(): array
     {
         return [
-            'names' => [
+            'primer_nombre' => [
+                'type' => Type::string()
+            ],
+            'segundo_nombre' => [
+                'type' => Type::string()
+            ],
+            'primer_apellido' => [
+                'type' => Type::string()
+            ],
+            'segundo_apellido' => [
                 'type' => Type::string()
             ],
             'email' => [
-                'type' => Type::string()
-            ],
-            'avatar' => [
-                'type' => Type::string()
-            ],
-            'document' => [
-                'type' => Type::string()
-            ],
-            'address' => [
-                'type' => Type::string()
-            ],
-            'uid' => [
                 'type' => Type::string()
             ],
         ];

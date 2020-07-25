@@ -43,7 +43,7 @@ class LoginMutation extends Mutation
 
     public function resolve($root, $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
     {
-        $credentials = ['email' => $args['email'], 'password' => $args['password'], 'is_active' => 1];
+        $credentials = ['email' => $args['email'], 'password' => $args['password'], 'estado_id' => 1];
         if (Auth::attempt($credentials)) {
             $user = User::find(Auth::id());
             $access_token = $user->createToken('Token Name')->accessToken;
@@ -58,7 +58,7 @@ class LoginMutation extends Mutation
         return [
             'code' => $this->error,
             'status_transaction' => false,
-            'message' => 'failure.',
+            'message' => 'Las credenciales son incorrectas.',
         ];
     }
 }
