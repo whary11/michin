@@ -22,10 +22,18 @@ Vue.use(VueRouter)
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
+//css Components
+import 'vue-datetime/dist/vue-datetime.css'
 
 
-
+// Components
 import Index from './Index.vue'
+import vSelect from 'vue-select'
+import { Datetime } from 'vue-datetime'
+// You need a specific loader for CSS files
+
+Vue.component('v-select', vSelect)
+Vue.component('datetime', Datetime)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
